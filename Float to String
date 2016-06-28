@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include<math.h>
+
+int main() 
+{
+double fn;
+int i,count=0,a,n=0,c;
+char ch[100],b;
+scanf("%lf",&fn);
+while(fn!=((int)fn))
+{
+  fn=fn*10;
+  count++;
+  fflush(stdin);
+}
+c=fn;
+while(c)
+{
+    
+     if(n==count) {
+         ch[n]='.';
+         n++;
+     }
+     a=c%10;
+    if(a<9)
+    {
+        ch[n]=((c%10)+1)+'0';
+        n++;
+    }
+    else{
+        ch[n]=(c%10)+'0';
+        n++;
+    }
+    c=c/10;
+}
+for(i=n-1;i>=0;i--)
+{
+    printf("%c",ch[i]);
+}
+
+	return 0;
+}
